@@ -1,0 +1,11 @@
+Feature: hello world with gauntlt using the generic comand line attack
+
+  Scenario: inside the gauntlt-docker container, eval the user accounts
+  When I launch a "generic" attack with:
+  """
+  cat /etc/passwd
+  """
+  Then the output should contain:
+  """
+  root
+  """
