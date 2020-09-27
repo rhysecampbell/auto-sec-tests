@@ -7,7 +7,8 @@ services:
 
 before_install:
 - docker pull karthequian/gruyere:latest
-- docker pull gauntlt/gauntlt
+  #- docker pull gauntlt/gauntlt
+- docker pull rhysdocker/auto-sec
 - docker run --rm -d -p 8008:8008 karthequian/gruyere:latest
 - docker ps -a
 - ./scripts/travis-config.sh
